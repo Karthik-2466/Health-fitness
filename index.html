@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PRANA - Traditional Indian health, fitness and wellness.">
+    <title>PRANA | Traditional Wellness</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <a href="#home" class="logo">🌿 PRANA</a>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#workouts">Workouts</a>
+        <a href="#diet">Diet</a>
+        <a href="#tracker">My Progress</a>
+    </nav>
+
+    <div class="nav-right">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☾</button>
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <span class="eyebrow">TRADITIONAL WELLNESS</span>
+
+        <h1>Live naturally.<br>
+            <span>Feel healthier.</span>
+        </h1>
+
+        <p>
+            Discover traditional Indian fitness, wholesome food
+            and mindful living. A simple path towards a balanced lifestyle.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#workouts" class="btn primary-btn">Explore Workouts →</a>
+            <a href="#diet" class="btn secondary-btn">Explore Diet</a>
+        </div>
+
+        <div class="hero-bottom">
+            <div>
+                <strong>01</strong>
+                <span>Move daily</span>
+            </div>
+            <div>
+                <strong>02</strong>
+                <span>Eat mindfully</span>
+            </div>
+            <div>
+                <strong>03</strong>
+                <span>Live peacefully</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900"
+             alt="Yoga and wellness">
+        <div class="image-label">
+            <span>🌱</span>
+            <div>
+                <strong>Find your balance</strong>
+                <small>One day at a time</small>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- DAILY SUMMARY -->
+<section class="section" id="tracker">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">YOUR DAILY ROUTINE</span>
+            <h2>Daily wellness</h2>
+        </div>
+        <span id="currentDate" class="date"></span>
+    </div>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+            <div class="summary-top">
+                <span>💧</span>
+                <small>WATER INTAKE</small>
+            </div>
+            <h3 id="waterValue">0 / 8</h3>
+            <p>Glasses of water</p>
+            <div class="progress">
+                <span id="waterProgress"></span>
+            </div>
+            <button class="text-btn" id="addWater">+ Add water</button>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-top">
+                <span>🏃</span>
+                <small>WORKOUT</small>
+            </div>
+            <h3 id="workoutValue">0 min</h3>
+            <p>Daily activity</p>
+            <div class="progress">
+                <span id="workoutProgress"></span>
+            </div>
+            <small>Goal: 30 minutes</small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-top">
+                <span>🌿</span>
+                <small>HABITS</small>
+            </div>
+            <h3 id="habitValue">0 / 3</h3>
+            <p>Healthy habits completed</p>
+            <div class="progress">
+                <span id="habitProgress"></span>
+            </div>
+            <small>Keep going!</small>
+        </div>
+
+    </div>
+
+    <div class="habit-card">
+        <h3>Today's healthy habits</h3>
+
+        <label>
+            <input type="checkbox" class="habit">
+            Morning stretching
+        </label>
+
+        <label>
+            <input type="checkbox" class="habit">
+            Eat a balanced meal
+        </label>
+
+        <label>
+            <input type="checkbox" class="habit">
+            Evening relaxation
+        </label>
+    </div>
+
+</section>
+
+<!-- WORKOUT -->
+<section class="section alternate" id="workouts">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">MOVE YOUR BODY</span>
+            <h2>Traditional workouts</h2>
+            <p>Simple movements inspired by traditional Indian practices.</p>
+        </div>
+    </div>
+
+    <div class="workout-grid">
+
+        <article class="workout-card">
+            <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=600" alt="Yoga">
+            <div class="workout-info">
+                <span>YOGA</span>
+                <h3>Surya Namaskar</h3>
+                <p>A traditional sequence of flowing yoga postures.</p>
+                <button class="learn-btn" data-workout="surya">Learn more →</button>
+            </div>
+        </article>
+
+        <article class="workout-card">
+            <img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600" alt="Tree pose">
+            <div class="workout-info">
+                <span>YOGA</span>
+                <h3>Vrikshasana</h3>
+                <p>A standing balance pose inspired by a tree.</p>
+                <button class="learn-btn" data-workout="tree">Learn more →</button>
+            </div>
+        </article>
+
+        <article class="workout-card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600" alt="Strength training">
+            <div class="workout-info">
+                <span>STRENGTH</span>
+                <h3>Dand Exercise</h3>
+                <p>A traditional Indian bodyweight movement.</p>
+                <button class="learn-btn" data-workout="dand">Learn more →</button>
+            </div>
+        </article>
+
+        <article class="workout-card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600" alt="Fitness training">
+            <div class="workout-info">
+                <span>STRENGTH</span>
+                <h3>Baithak</h3>
+                <p>A traditional Indian squat exercise.</p>
+                <button class="learn-btn" data-workout="baithak">Learn more →</button>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- WORKOUT TIMER -->
+    <div class="timer-card">
+        <div>
+            <span class="eyebrow">STAY CONSISTENT</span>
+            <h2>Workout timer</h2>
+            <p>Take a few minutes to move and recharge.</p>
+        </div>
+
+        <div class="timer">
+            <h2 id="timerDisplay">05:00</h2>
+
+            <div class="timer-buttons">
+                <button class="btn primary-btn" id="startTimer">Start</button>
+                <button class="btn secondary-btn" id="pauseTimer">Pause</button>
+                <button class="btn secondary-btn" id="resetTimer">Reset</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- DIET -->
+<section class="section" id="diet">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">EAT WELL, LIVE WELL</span>
+            <h2>Traditional Indian diet</h2>
+            <p>Simple, wholesome foods for everyday nourishment.</p>
+        </div>
+    </div>
+
+    <div class="diet-grid">
+
+        <article class="diet-card">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600" alt="Breakfast">
+            <div>
+                <span>🌅 BREAKFAST</span>
+                <h3>Idli & Sambar</h3>
+                <p>Steamed rice cakes with lentils and vegetables.</p>
+            </div>
+        </article>
+
+        <article class="diet-card">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600" alt="Lunch">
+            <div>
+                <span>☀ LUNCH</span>
+                <h3>Traditional Thali</h3>
+                <p>Rice, dal, seasonal vegetables and curd.</p>
+            </div>
+        </article>
+
+        <article class="diet-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" alt="Healthy food">
+            <div>
+                <span>🌙 DINNER</span>
+                <h3>Khichdi</h3>
+                <p>A comforting rice and lentil dish with vegetables.</p>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="diet-tip">
+        <span>🌿</span>
+        <div>
+            <h3>A little wellness wisdom</h3>
+            <p>Eat a varied diet with vegetables, fruits, whole grains
+                and protein-rich foods. Choose meals that suit your needs.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- BMI -->
+<section class="section alternate">
+    <div class="calculator-layout">
+
+        <div>
+            <span class="eyebrow">UNDERSTAND YOUR BODY</span>
+            <h2>Simple BMI calculator</h2>
+            <p>Check your body mass index using your height and weight.</p>
+        </div>
+
+        <div class="calculator-card">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter weight">
+
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="Enter height">
+
+            <button class="btn primary-btn" id="calculateBMI">
+                Calculate BMI
+            </button>
+
+            <div id="bmiResult">Your result will appear here.</div>
+            <small>BMI is a screening measure, not a medical diagnosis.</small>
+        </div>
+
+    </div>
+</section>
+
+<!-- WELLNESS TIP -->
+<section class="wellness-tip">
+    <span class="eyebrow">DAILY WELLNESS THOUGHT</span>
+    <h2 id="tipText">Health is the greatest wealth.</h2>
+    <button id="newTip" class="btn secondary-btn">New wellness tip ↗</button>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <a href="#home" class="logo">🌿 PRANA</a>
+    <p>Traditional wisdom for modern living.</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#workouts">Workouts</a>
+        <a href="#diet">Diet</a>
+    </div>
+
+    <small>© 2026 PRANA. General wellness education.</small>
+</footer>
+
+<!-- WORKOUT MODAL -->
+<div class="modal" id="workoutModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">×</button>
+        <span class="eyebrow">WORKOUT DETAILS</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-tip" id="modalTip"></div>
+        <button class="btn primary-btn" id="modalTimer">Start 5-minute timer</button>
+    </div>
+</div>
+
+</body>
+</html>

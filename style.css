@@ -1,0 +1,801 @@
+:root {
+    --green: #355b42;
+    --green-dark: #24432f;
+    --green-light: #e9f0e8;
+    --cream: #faf9f3;
+    --white: #ffffff;
+    --text: #29382d;
+    --muted: #7c887d;
+    --gold: #b79558;
+    --border: #e8e9e0;
+    --shadow: 0 8px 30px rgba(40,60,40,.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+    height: 75px;
+    padding: 0 8%;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn, .menu-btn {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--green);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    padding: 85px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    background: #f0f2e9;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 67px);
+    line-height: 1.15;
+    color: var(--green-dark);
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #a28b5d;
+    font-style: italic;
+}
+
+.hero-content > p {
+    color: var(--muted);
+    max-width: 470px;
+    font-size: 15px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 21px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.primary-btn {
+    background: var(--green);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border-color: var(--green);
+    color: var(--green);
+    background: transparent;
+}
+
+.secondary-btn:hover {
+    background: var(--green-light);
+}
+
+.hero-bottom {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.hero-bottom div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-bottom strong {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+.hero-bottom span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image > img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 180px 180px 12px 12px;
+}
+
+.image-label {
+    position: absolute;
+    left: -25px;
+    bottom: 25px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border-radius: 9px;
+    box-shadow: var(--shadow);
+}
+
+.image-label > span {
+    font-size: 27px;
+}
+
+.image-label div {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-label small {
+    color: var(--muted);
+}
+
+.section {
+    padding: 75px 8%;
+}
+
+.alternate {
+    background: #f0f2e9;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 38px);
+    color: var(--green-dark);
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+.section-heading p, .calculator-layout > div:first-child p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.date {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.summary-card, .habit-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: 11px;
+    box-shadow: var(--shadow);
+}
+
+.summary-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-top span {
+    font-size: 23px;
+}
+
+.summary-top small {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.summary-card h3 {
+    color: var(--green);
+    font-size: 26px;
+    margin-top: 14px;
+}
+
+.summary-card p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.progress {
+    height: 6px;
+    background: #edf0e9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 17px 0 10px;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #72966c;
+    transition: .3s;
+}
+
+.summary-card > small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.text-btn {
+    border: 0;
+    background: transparent;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.habit-card {
+    margin-top: 20px;
+}
+
+.habit-card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.habit-card label {
+    display: inline-flex;
+    gap: 8px;
+    margin: 8px 22px 0 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.habit-card input {
+    accent-color: var(--green);
+}
+
+.workout-grid, .diet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.workout-card, .diet-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.workout-card:hover, .diet-card:hover {
+    transform: translateY(-5px);
+}
+
+.workout-card img, .diet-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.workout-info {
+    padding: 17px;
+}
+
+.workout-info > span, .diet-card > div > span {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.workout-info h3, .diet-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--green-dark);
+    margin: 8px 0;
+}
+
+.workout-info p, .diet-card p {
+    color: var(--muted);
+    font-size: 12px;
+    min-height: 55px;
+}
+
+.learn-btn {
+    border: 0;
+    background: transparent;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.timer-card {
+    margin-top: 35px;
+    background: var(--green-dark);
+    color: white;
+    padding: 35px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.timer-card h2 {
+    color: white;
+}
+
+.timer-card p {
+    color: #c7d2c6;
+    font-size: 13px;
+}
+
+.timer {
+    text-align: center;
+}
+
+.timer h2 {
+    font-size: 45px;
+    color: #e5d4a4;
+    margin-bottom: 10px;
+}
+
+.timer-buttons {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timer-buttons .btn {
+    padding: 9px 14px;
+    font-size: 11px;
+}
+
+.timer .secondary-btn {
+    color: white;
+    border-color: #b5c3b4;
+}
+
+.diet-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.diet-card img {
+    height: 210px;
+}
+
+.diet-card > div {
+    padding: 20px;
+}
+
+.diet-tip {
+    margin-top: 25px;
+    padding: 22px;
+    background: var(--green-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.diet-tip > span {
+    font-size: 30px;
+}
+
+.diet-tip h3 {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+}
+
+.diet-tip p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.calculator-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.calculator-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.calculator-card label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.calculator-card input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    color: var(--text);
+    border-radius: 7px;
+    outline: none;
+}
+
+.calculator-card input:focus {
+    border-color: var(--green);
+}
+
+.calculator-card button {
+    width: 100%;
+}
+
+#bmiResult {
+    background: var(--green-light);
+    color: var(--green);
+    padding: 12px;
+    text-align: center;
+    margin: 15px 0;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.calculator-card > small {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.wellness-tip {
+    padding: 70px 20px;
+    background: #e9eee4;
+    text-align: center;
+}
+
+.wellness-tip h2 {
+    margin: 20px 0;
+    font-style: italic;
+}
+
+footer {
+    background: #203a29;
+    color: white;
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+footer .logo {
+    color: #d7c28f;
+}
+
+footer p {
+    color: #bdcdbd;
+    font-size: 13px;
+    margin: 10px 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 22px;
+    font-size: 12px;
+}
+
+footer small {
+    color: #aab9aa;
+    font-size: 11px;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(0,0,0,.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    max-width: 440px;
+    width: 100%;
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin: 15px 0;
+}
+
+.modal-content p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.modal-tip {
+    padding: 15px;
+    background: var(--green-light);
+    border-radius: 8px;
+    color: var(--green);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--green);
+}
+
+/* DARK MODE */
+body.dark {
+    --cream: #17231b;
+    --white: #223328;
+    --text: #e5ede5;
+    --muted: #aab9aa;
+    --border: #36483a;
+    --green-light: #304737;
+    --green-dark: #e0eade;
+    background: var(--cream);
+}
+
+body.dark .navbar,
+body.dark .summary-card,
+body.dark .habit-card,
+body.dark .workout-card,
+body.dark .diet-card,
+body.dark .calculator-card,
+body.dark .modal-content {
+    background: #223328;
+    color: var(--text);
+}
+
+body.dark .hero,
+body.dark .alternate,
+body.dark .wellness-tip {
+    background: #1e3023;
+}
+
+body.dark h2,
+body.dark .hero h1,
+body.dark .workout-info h3,
+body.dark .diet-card h3 {
+    color: #e0eade;
+}
+
+body.dark .calculator-card input {
+    background: #17231b;
+    color: white;
+}
+
+body.dark .modal-tip,
+body.dark #bmiResult {
+    background: #304737;
+    color: #e0eade;
+}
+
+body.dark .diet-tip {
+    background: #304737;
+}
+
+body.dark .diet-tip h3 {
+    color: #e0eade;
+}
+
+body.dark .image-label {
+    background: #223328;
+    color: white;
+}
+
+body.dark .timer-card {
+    background: #101c13;
+}
+
+/* RESPONSIVE */
+@media(max-width: 1000px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero, .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .workout-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 650px) {
+
+    .navbar {
+        height: 68px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        padding: 20px 6%;
+        background: var(--white);
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+        gap: 35px;
+    }
+
+    .hero-image > img {
+        height: 320px;
+    }
+
+    .hero-bottom {
+        gap: 17px;
+    }
+
+    .image-label {
+        left: -5px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .summary-grid,
+    .workout-grid,
+    .diet-grid,
+    .calculator-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .habit-card label {
+        display: flex;
+    }
+
+    .timer-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .timer {
+        width: 100%;
+    }
+
+    .diet-tip {
+        align-items: flex-start;
+    }
+}
